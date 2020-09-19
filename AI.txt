@@ -1,0 +1,53 @@
+AI
+
+V 1.0.0
+
+Neural network
+	Input:
+		Car speed
+		Car angle
+		Car position
+		Distance to left border
+		Distance to right border
+	Output:
+		Car acceleration
+		Car deceleration
+		Car left rotation
+		Car right rotation
+	Parameters:
+		Weights and biases
+
+
+DB (store simulation)
+	Simulation
+		List border positions (left & right)
+		List car statuses at each step
+			Speed
+			Angle
+			Position
+		Result
+
+Engine
+	Advance the simulation step by step
+	Input:
+		Simulation
+		NN Output
+	Output:
+		Simulation one step further
+
+Cost function
+	Input:
+		NN Weights and biases
+	Output:	
+		1 number
+	Parameters:
+		Many training examples
+	Average of all results
+		One result:
+			No passing over the border line
+			As close as possible to the goal in the fewer number of steps
+
+
+Render
+	Render simulation
+
